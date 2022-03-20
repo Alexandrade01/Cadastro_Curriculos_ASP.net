@@ -11,7 +11,7 @@ using Cadastro_Curriculos.DAO;
 
 namespace Cadastro_Curriculos.Controllers
 {
-    public class UserController:Controller
+    public class UserController : Controller
     {
         public IActionResult Index()
         {
@@ -31,22 +31,43 @@ namespace Cadastro_Curriculos.Controllers
         public IActionResult Create()
         {
             UserViewModel user = new UserViewModel();
-            return View("Form",user);
+            return View("Form", user);
         }
 
-        public IActionResult Salvar(UserViewModel user)
+        public IActionResult Save(UserViewModel user)
         {
             try
             {
                 UserDAO dao = new UserDAO();
-                dao.Inserir(user);
+
+                if (dao.Consulta(user.Id) == null) { dao.Inserir(user); }
+
+                else { dao.Inserir(user); }
+
                 return RedirectToAction("Index");
             }
             catch (Exception erro)
             {
-                return View("Error", new ErrorViewModel(erro.Message));
+                return View("Error", new ErrorViewModel(erro.ToString()));
             }
 
+        }
+
+        public IActionResult Edit(int Id)
+        {
+            try
+            {
+                UserDAO dao = new UserDAO();
+                UserViewModel user = dao.Consulta(Id);
+                if (user == null)
+                    return RedirectToAction("Index");
+                else
+                    return View("Form", user);
+            }
+            catch (Exception erro)
+            {
+                return View("Error", new ErrorViewModel(erro.ToString()));
+            }
         }
     }
 }

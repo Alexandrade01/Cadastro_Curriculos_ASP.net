@@ -3,7 +3,10 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <h2>Cadastro de Currículos</h2>
-<form action="Salvar" method="post">
+<form action="Save" method="post">
+    <label for="Id" class="form-label">Id</label>
+    <input type="number" Name="Id" value="@Model.Id" />
+    <br />
     <label for="CPF" class="form-label">CPF</label>
     <input type="text" Name="CPF" value="@Model.CPF" />
     <br />

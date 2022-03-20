@@ -7,6 +7,7 @@ namespace Cadastro_Curriculos.Models
 {
     public class UserViewModel
     {
+        public int Id {get;set;}
         public string CPF { get; set; }
         public string Nome { get; set; }
     }

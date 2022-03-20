@@ -19,8 +19,8 @@ namespace Cadastro_Curriculos.DAO
            "values(@CPF, @nome, @endereco, @numero, @DDD, @telefone, @email, @salario, @cargo,@instituicao1, @formacao1, @conclusao1, @instituicao2, @formacao2, @conclusao2, @instituicao3, @formacao3, @conclusao3, @instituicao4, @formacao4, @conclusao4, @instituicao5, @formacao5, @conclusao5, @empresa1, @funcao1, @empresa2, @funcao2, @empresa3, @funcao3, @idioma, @nivel)";
            */
 
-            string sql = "insert into Cadastros(CPF, nome)" +
-            "values( @CPF, @nome)";
+            string sql = "insert into Cadastros(Id,CPF, nome)" +
+            "values(@Id, @CPF, @nome)";
             ExecutaSql(sql, CriaParametros(user));
         }
 
@@ -38,9 +38,10 @@ namespace Cadastro_Curriculos.DAO
 
         private SqlParameter[] CriaParametros(UserViewModel user)
         {
-            SqlParameter[] parametros = new SqlParameter[2];
-            parametros[0] = new SqlParameter("CPF", user.CPF);
-            parametros[1] = new SqlParameter("nome", user.Nome);
+            SqlParameter[] parametros = new SqlParameter[3];
+            parametros[0] = new SqlParameter("Id", user.Id);
+            parametros[1] = new SqlParameter("CPF", user.CPF);
+            parametros[2] = new SqlParameter("nome", user.Nome);
            /* parametros[2] = new SqlParameter("endereco", user.Endereco);
             parametros[3] = new SqlParameter("numero", user.Numero);
             parametros[4] = new SqlParameter("DDD", user.DDD);
@@ -77,9 +78,9 @@ namespace Cadastro_Curriculos.DAO
         }
 
 
-        public void Excluir(string CPF)
+        public void Excluir(int id)
         {
-            string sql = "delete Cadastros where CPF =" + CPF;
+            string sql = "delete Cadastros where Id =" + id;
 
             ExecutaSql(sql, null);
         } 
@@ -102,6 +103,7 @@ namespace Cadastro_Curriculos.DAO
          private UserViewModel MontaAluno(DataRow registro)
         {
             UserViewModel a = new UserViewModel();
+            a.Id = Convert.ToInt32(registro["Id"]);
             a.CPF = registro["CPF"].ToString();
             a.Nome = registro["nome"].ToString();
             /* a.CidadeId = Convert.ToInt32(registro["cidadeId"]);
@@ -113,9 +115,9 @@ namespace Cadastro_Curriculos.DAO
 
 
 
-        public UserViewModel Consulta(string CPF)
+        public UserViewModel Consulta(int id)
         {
-            string sql = "select * from Cadastros where CPF = " + CPF;
+            string sql = "select * from Cadastros where id = " + id;
             DataTable tabela = HelperDAO.ExecutaSelect(sql, null);
 
             if (tabela.Rows.Count == 0)
