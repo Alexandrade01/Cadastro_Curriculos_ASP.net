@@ -4,12 +4,17 @@
 }
 <h2>Cadastro de Currículos</h2>
 <form action="Save" method="post">
+   
+
+
     <label for="Id" class="form-label">Id</label>
-    <input type="number" Name="Id" value="@Model.Id" />
+    <input type="number" Name="Id" value="@Model.Id"  readonly />
     <br />
+
     <label for="CPF" class="form-label">CPF</label>
     <input type="text" Name="CPF" value="@Model.CPF" />
     <br />
+
     <label for="Nome" class="form-label">Nome do usuário</label>
     <input type="text" Name="Nome" value="@Model.Nome" />
     <br />

@@ -30,7 +30,10 @@ namespace Cadastro_Curriculos.Controllers
 
         public IActionResult Create()
         {
+
             UserViewModel user = new UserViewModel();
+            UserDAO userDao = new UserDAO();
+            user.Id = userDao.ProximoId();
             return View("Form", user);
         }
 
@@ -59,6 +62,8 @@ namespace Cadastro_Curriculos.Controllers
         {
             try
             {
+               
+
                 UserDAO dao = new UserDAO();
                 UserViewModel user = dao.Consulta(Id);
                 if (user == null)
@@ -78,7 +83,7 @@ namespace Cadastro_Curriculos.Controllers
             {
                 UserDAO dao = new UserDAO();
                 dao.Excluir(id);
-                return RedirectToAction("index");
+                return RedirectToAction("Index");
             }
             catch (Exception erro)
             {
