@@ -1,4 +1,5 @@
-﻿using Cadastro_Curriculos.Models;
+﻿
+using Cadastro_Curriculos.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -6,32 +7,46 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Cadastro_Curriculos.DAO;
 
 namespace Cadastro_Curriculos.Controllers
 {
     public class UserController:Controller
     {
-        private readonly ILogger<UserController> _logger;
-
-        public UserController(ILogger<UserController> logger)
-        {
-            _logger = logger;
-        }
-
         public IActionResult Index()
         {
-            return View();
+            try
+            {
+                UserDAO dao = new UserDAO();
+                var lista = dao.Listagem();
+                return View(lista);
+            }
+            catch (Exception erro)
+            {
+                return View("Error", new ErrorViewModel(erro.Message));
+            }
         }
 
-        public IActionResult Privacy()
+
+        public IActionResult Create()
         {
-            return View();
+            UserViewModel user = new UserViewModel();
+            return View("Form",user);
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        public IActionResult Salvar(UserViewModel user)
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            try
+            {
+                UserDAO dao = new UserDAO();
+                dao.Inserir(user);
+                return RedirectToAction("Index");
+            }
+            catch (Exception erro)
+            {
+                return View("Error", new ErrorViewModel(erro.Message));
+            }
+
         }
     }
 }

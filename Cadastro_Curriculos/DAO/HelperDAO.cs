@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CadAlunoMVC.DAO
+namespace Cadastro_Curriculos.DAO
 {
     public static class HelperDAO
     {
