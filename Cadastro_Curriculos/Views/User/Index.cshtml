@@ -10,6 +10,9 @@
 <br />
 <table class="table table-responsive">
     <tr>
+        <th></th>
+        <th></th>
+        <th>ID</th>
         <th>CPF</th>
         <th>Nome</th>
     </tr>
@@ -18,10 +21,19 @@
         <tr>
 
             <td><a href="/user/Edit?Id=@user.Id">Editar</a> </td>
+            <td><a href="javascript:apagarAluno(@user.Id)">Deletar</a> </td>
             <td>@user.Id</td>
             <td>@user.CPF</td>
             <td>@user.Nome</td>
         </tr>
     }
 </table>
+
+<script>
+     function apagarAluno(id)
+     {
+         if (confirm('Confirma a exclusão do registro?'))
+         location.href = 'user/Delete?id=' + id;
+     }
+</script>
 

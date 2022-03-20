@@ -42,7 +42,9 @@ namespace Cadastro_Curriculos.Controllers
 
                 if (dao.Consulta(user.Id) == null) { dao.Inserir(user); }
 
-                else { dao.Inserir(user); }
+                else {
+                    
+                    dao.Alterar(user);}
 
                 return RedirectToAction("Index");
             }
@@ -69,5 +71,20 @@ namespace Cadastro_Curriculos.Controllers
                 return View("Error", new ErrorViewModel(erro.ToString()));
             }
         }
+
+        public IActionResult Delete(int id)
+        {
+            try
+            {
+                UserDAO dao = new UserDAO();
+                dao.Excluir(id);
+                return RedirectToAction("index");
+            }
+            catch (Exception erro)
+            {
+                return View("Error", new ErrorViewModel(erro.ToString()));
+            }
+        }
+
     }
 }

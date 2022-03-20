@@ -25,16 +25,16 @@ namespace Cadastro_Curriculos.DAO
         }
 
 
-        /* public void Alterar(AlunoViewModel aluno)
+         public void Alterar(UserViewModel aluno)
          {
              string sql =
-             "update alunos set nome = @nome, " +
-             "mensalidade = @mensalidade, " +
-             "cidadeId = @cidadeId" +
-             "dataNascimento = @dataNascimento where id = @id";
+             "update Cadastros set " +
+             "CPF = @CPF, " +
+             "nome = @nome " +
+             "where id = @id";
 
              ExecutaSql(sql, CriaParametros(aluno));
-         } */
+         } 
 
         private SqlParameter[] CriaParametros(UserViewModel user)
         {
