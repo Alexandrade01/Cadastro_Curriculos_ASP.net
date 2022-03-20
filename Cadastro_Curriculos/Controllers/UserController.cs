@@ -91,5 +91,20 @@ namespace Cadastro_Curriculos.Controllers
             }
         }
 
+
+        public IActionResult Exibir(int id)
+        {
+            try
+            {
+                UserDAO dao = new UserDAO();
+                dao.Excluir(id);
+                return RedirectToAction("Index");
+            }
+            catch (Exception erro)
+            {
+                return View("Error", new ErrorViewModel(erro.ToString()));
+            }
+        }
+
     }
 }

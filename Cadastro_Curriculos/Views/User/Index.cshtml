@@ -22,6 +22,7 @@
 
             <td><a href="/user/Edit?Id=@user.Id">Editar</a> </td>
             <td><a href="javascript:apagarAluno(@user.Id)">Deletar</a> </td>
+            <td><a href="javascript:ExibirAluno(@user.Id)">Exibir</a> </td>
             <td>@user.Id</td>
             <td>@user.CPF</td>
             <td>@user.Nome</td>
@@ -34,6 +35,11 @@
      {
          if (confirm('Confirma a exclusão do registro?'))
          location.href = 'user/Delete?id=' + id;
-     }
+    }
+
+    function apagarAluno(id) {
+        
+            location.href = 'user/Exibir?id=' + id;
+    }
 </script>
 

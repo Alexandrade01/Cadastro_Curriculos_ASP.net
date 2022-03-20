@@ -4,19 +4,20 @@
 }
 <h2>Cadastro de Currículos</h2>
 <form action="Save" method="post">
-   
+
 
 
     <label for="Id" class="form-label">Id</label>
-    <input type="number" Name="Id" value="@Model.Id"  readonly />
+    <input type="number" Name="Id" value="@Model.Id" readonly />
     <br />
 
     <label for="CPF" class="form-label">CPF</label>
-    <input type="text" Name="CPF" value="@Model.CPF" />
+    <input type="text" Name="CPF" value="@Model.CPF" placeholder="123.456.789-00"  pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+      title="Digite o CPF no formato nnn.nnn.nnn-nn" />
     <br />
 
     <label for="Nome" class="form-label">Nome do usuário</label>
-    <input type="text" Name="Nome" value="@Model.Nome" />
+    <input type="text" Name="Nome" value="@Model.Nome" placeholder="Ex. João da Silva" />
     <br />
 
     <input type="submit" value="Salvar dados" />

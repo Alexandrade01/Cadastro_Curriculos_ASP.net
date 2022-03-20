@@ -148,6 +148,20 @@ namespace Cadastro_Curriculos.DAO
             return Convert.ToInt32(tabela.Rows[0]["MAIOR"]);
         }
 
+        public UserViewModel Exibir(int id)
+        {
+
+            UserViewModel userReturn = new UserViewModel();
+            string sql = "select * from Cadastros where id = "+id;
+            DataTable tabela = HelperDAO.ExecutaSelect(sql, null);
+
+            foreach (DataRow registro in tabela.Rows) {
+                userReturn = MontaAluno(registro);
+            }
+                
+            return userReturn;
+        }
+
 
     }
 }
