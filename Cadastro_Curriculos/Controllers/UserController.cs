@@ -27,6 +27,11 @@ namespace Cadastro_Curriculos.Controllers
             }
         }
 
+        public IActionResult About()
+        {
+            return View();
+        }
+
 
         public IActionResult Create()
         {
@@ -97,8 +102,9 @@ namespace Cadastro_Curriculos.Controllers
             try
             {
                 UserDAO dao = new UserDAO();
-                dao.Excluir(id);
-                return RedirectToAction("Index");
+                UserViewModel user = dao.Exibir(id);
+                return View("FormComplete", user);
+               
             }
             catch (Exception erro)
             {

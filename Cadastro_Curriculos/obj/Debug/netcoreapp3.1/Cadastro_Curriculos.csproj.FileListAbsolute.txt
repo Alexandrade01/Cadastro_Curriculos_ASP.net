@@ -344,8 +344,6 @@ C:\Users\alexb\OneDrive - Fundação Salvador Arena\5 SEMESTRE\Linguagem de Prog
 C:\Users\alexb\OneDrive - Fundação Salvador Arena\5 SEMESTRE\Linguagem de Programação I\prova n2b1\Cadastro_Curriculos\Cadastro_Curriculos\obj\Debug\netcoreapp3.1\Cadastro_Curriculos.TagHelpers.input.cache
 C:\Users\alexb\OneDrive - Fundação Salvador Arena\5 SEMESTRE\Linguagem de Programação I\prova n2b1\Cadastro_Curriculos\Cadastro_Curriculos\obj\Debug\netcoreapp3.1\Cadastro_Curriculos.TagHelpers.output.cache
 C:\Users\alexb\OneDrive - Fundação Salvador Arena\5 SEMESTRE\Linguagem de Programação I\prova n2b1\Cadastro_Curriculos\Cadastro_Curriculos\obj\Debug\netcoreapp3.1\Cadastro_Curriculos.RazorCoreGenerate.cache
-C:\Users\alexb\OneDrive - Fundação Salvador Arena\5 SEMESTRE\Linguagem de Programação I\prova n2b1\Cadastro_Curriculos\Cadastro_Curriculos\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
-C:\Users\alexb\OneDrive - Fundação Salvador Arena\5 SEMESTRE\Linguagem de Programação I\prova n2b1\Cadastro_Curriculos\Cadastro_Curriculos\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Users\alexb\OneDrive - Fundação Salvador Arena\5 SEMESTRE\Linguagem de Programação I\prova n2b1\Cadastro_Curriculos\Cadastro_Curriculos\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\alexb\OneDrive - Fundação Salvador Arena\5 SEMESTRE\Linguagem de Programação I\prova n2b1\Cadastro_Curriculos\Cadastro_Curriculos\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\alexb\OneDrive - Fundação Salvador Arena\5 SEMESTRE\Linguagem de Programação I\prova n2b1\Cadastro_Curriculos\Cadastro_Curriculos\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
@@ -360,3 +358,5 @@ C:\Users\alexb\OneDrive - Fundação Salvador Arena\5 SEMESTRE\Linguagem de Prog
 C:\Users\alexb\OneDrive - Fundação Salvador Arena\5 SEMESTRE\Linguagem de Programação I\prova n2b1\Cadastro_Curriculos\Cadastro_Curriculos\obj\Debug\netcoreapp3.1\Cadastro_Curriculos.pdb
 C:\Users\alexb\OneDrive - Fundação Salvador Arena\5 SEMESTRE\Linguagem de Programação I\prova n2b1\Cadastro_Curriculos\Cadastro_Curriculos\obj\Debug\netcoreapp3.1\Cadastro_Curriculos.genruntimeconfig.cache
 C:\Users\alexb\OneDrive - Fundação Salvador Arena\5 SEMESTRE\Linguagem de Programação I\prova n2b1\Cadastro_Curriculos\Cadastro_Curriculos\obj\Debug\netcoreapp3.1\Razor\Views\User\Form.cshtml.g.cs
+C:\Users\alexb\OneDrive - Fundação Salvador Arena\5 SEMESTRE\Linguagem de Programação I\prova n2b1\Cadastro_Curriculos\Cadastro_Curriculos\obj\Debug\netcoreapp3.1\Razor\Views\User\FormComplete.cshtml.g.cs
+C:\Users\alexb\OneDrive - Fundação Salvador Arena\5 SEMESTRE\Linguagem de Programação I\prova n2b1\Cadastro_Curriculos\Cadastro_Curriculos\obj\Debug\netcoreapp3.1\Razor\Views\User\About.cshtml.g.cs
