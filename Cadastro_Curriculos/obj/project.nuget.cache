@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "S/C601XffLu7K0hFYHjB5Zge6NnA/AYQsJ6+8kC0sMYaVhzfUTiXOFfqgJFYXrxhAi3c/vQhw2jRvXYOIIz49w==",
+  "dgSpecHash": "Xohuiio2E4iBwDO7MtFNHbIDywlV4IjHqjhd2yGhI9mxxhVDu4xrnbO8uiIIAc4+hVEFllqq1X/+P4xuKV84LQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\alexb\\OneDrive - Fundação Salvador Arena\\5 SEMESTRE\\Linguagem de Programação I\\prova n2b1\\Cadastro_Curriculos\\Cadastro_Curriculos\\Cadastro_Curriculos.csproj",
+  "projectFilePath": "C:\\Users\\alexb\\Desktop\\versao minha\\Cadastro_Curriculos\\Cadastro_Curriculos\\Cadastro_Curriculos.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\alexb\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.extensions\\3.1.23\\microsoft.aspnetcore.mvc.razor.extensions.3.1.23.nupkg.sha512",
     "C:\\Users\\alexb\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.runtimecompilation\\3.1.23\\microsoft.aspnetcore.mvc.razor.runtimecompilation.3.1.23.nupkg.sha512",

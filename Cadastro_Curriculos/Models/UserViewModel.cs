@@ -7,7 +7,7 @@ namespace Cadastro_Curriculos.Models
 {
     public class UserViewModel
     {
-        public int Id {get;set;}
+        public int Id { get; set; }
         public string CPF { get; set; }
         public string Nome { get; set; }
         public string? Endereco { get; set; }
@@ -42,5 +42,12 @@ namespace Cadastro_Curriculos.Models
 
         public string? Idioma { get; set; }
         public string? Nivel { get; set; }
+
+        public string ValidaData(DateTime? time)
+        {
+
+            if (time == null) { return null; }
+            else { return time.Value.ToShortDateString(); }
+        }
     }
 }

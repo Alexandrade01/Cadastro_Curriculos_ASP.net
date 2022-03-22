@@ -1,78 +1,120 @@
 ﻿@model UserViewModel
 
 
-<h1 class="text-center" > @Model.Nome </h1>
+<h1 class="text-center"> @Model.Nome </h1>
 <br />
 <br />
 
-<p>
 
-    <label class="form-label"> @Model.Id</label>
-    <br />
-    <label class="form-label"> @Model.CPF</label>
-    <br />
-    <label class="form-label"> @Model.Nome</label>
-    <br />
-    <label class="form-label"> @Model.Endereco</label>
-    <br />
-    <label class="form-label"> @Model.Numero</label>
-    <br />
-    <label class="form-label"> @Model.DDD</label>
-    <br />
-    <label class="form-label"> @Model.Telefone</label>
-    <br />
-    <label class="form-label"> @Model.Email</label>
-    <br />
-    <label class="form-label"> @Model.Salario</label>
-    <br />
-    <label class="form-label"> @Model.Cargo </label>
-    <br />
-    <label class="form-label"> @Model.Instituicao1</label>
-    <br />
-    <label class="form-label"> @Model.Formacao1</label>
-    <br />
-    <label class="form-label"> @Model.Conclusao1</label>
-    <br />
-    <label class="form-label"> @Model.Instituicao2</label>
-    <br />
-    <label class="form-label"> @Model.Formacao2</label>
-    <br />
-    <label class="form-label"> @Model.Conclusao2</label>
-    <br />
-    <label class="form-label"> @Model.Instituicao3</label>
-    <br />
-    <label class="form-label"> @Model.Formacao3</label>
-    <br />
-    <label class="form-label"> @Model.Conclusao3</label>
-    <br />
-    <label class="form-label"> @Model.Instituicao4</label>
-    <br />
-    <label class="form-label"> @Model.Formacao4</label>
-    <br />
-    <label class="form-label"> @Model.Conclusao4</label>
-    <br />
-    <label class="form-label"> @Model.Instituicao5</label>
-    <br />
-    <label class="form-label"> @Model.Formacao5</label>
-    <br />
-    <label class="form-label"> @Model.Conclusao5</label>
-    <br />
-    <label class="form-label"> @Model.Empresa1</label>
-    <br />
-    <label class="form-label"> @Model.Funcao1</label>
-    <br />
-    <label class="form-label"> @Model.Empresa2</label>
-    <br />
-    <label class="form-label"> @Model.Funcao2</label>
-    <br />
-    <label class="form-label"> @Model.Empresa3</label>
-    <br />
-    <label class="form-label"> @Model.Funcao3</label>
-    <br />
+<table class="table table-hover">
+
+    <tr class="table-active">
+        <th scope="auto">ID: @Model.Id</th>
+        <th scope="auto">CPF: @Model.CPF</th>
+        <th scope="auto">NOME: @Model.Nome</th>
+        <td></td>
+    </tr>
+
+    <tr class="table-active">
+        <th scope="auto">Endereço: @Model.Endereco</th>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    <tr class="table-active">
+        <th scope="auto">Email: @Model.Email</th>
+        <th scope="auto">Numero: @Model.Numero</th>
+        <th scope="auto">DDD: @Model.DDD</th>
+        <td></td>
+    </tr>
+
+    <tr class="table-active">
+        <th scope="auto">Telefone: @Model.Telefone</th>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    <tr class="table-active">
+        <th scope="auto">Salario: @Model.Salario</th>
+        <td></td>
+        <th scope="auto">Cargo: @Model.Cargo</th>
+        <td></td>
+    </tr>
+
+    <tr class="table-active">
+        <th scope="auto">Instituição: @Model.Instituicao1</th>
+        <th scope="auto">Formação: @Model.Formacao1</th>
+        <th scope="auto">Conclusão: @Model.Conclusao1.ToShortDateString()</th>
+        <td></td>
+    </tr>
+
+    <tr class="table-active">
+        <th scope="auto">Instituição: @Model.Instituicao2</th>
+        <th scope="auto">Formação: @Model.Formacao2</th>
+        <th scope="auto">Conclusão: @Model.ValidaData(@Model.Conclusao2)</th> 
+        <td></td>
+    </tr>
+
+    <tr class="table-active">
+        <th scope="auto">Instituição: @Model.Instituicao3</th>
+        <th scope="auto">Formação: @Model.Formacao3</th>
+        <th scope="auto">Conclusão: @Model.ValidaData(@Model.Conclusao3)</th>
+        <td></td>
+
+    </tr>
+
+    <tr class="table-active">
+        <th scope="auto">Instituição: @Model.Instituicao4</th>
+        <th scope="auto">Formação: @Model.Formacao4</th>
+        <th scope="auto">Conclusão: @Model.ValidaData(@Model.Conclusao4)</th>
+        <td></td>
+
+    </tr>
+
+    <tr class="table-active">
+        <th scope="auto">Instituição: @Model.Instituicao5</th>
+        <th scope="auto">Formação: @Model.Formacao5</th>
+        <th scope="auto">Conclusão: @Model.ValidaData(@Model.Conclusao5)</th>
+        <td></td>
+
+
+    </tr>
+
+    <tr class="table-active">
+        <th scope="auto">Empresa: @Model.Empresa1</th>
+        <th scope="auto">Função: @Model.Funcao1</th>
+        <td></td>
+        <td></td>
+
+    </tr>
+
+    <tr class="table-active">
+
+        <th scope="auto">Empresa: @Model.Empresa2</th>
+        <th scope="auto">Função: @Model.Funcao2</th>
+        <td></td>
+        <td></td>
+
+    </tr>
+
+    <tr class="table-active">
+
+        <th scope="auto">Empresa: @Model.Empresa3</th>
+        <th scope="auto">Função: @Model.Funcao3</th>
+        <td></td>
+        <td></td>
+
+    </tr>
+
+</table>
 
 
 
 
-</p>
-    
-    
+
+
+
+
+

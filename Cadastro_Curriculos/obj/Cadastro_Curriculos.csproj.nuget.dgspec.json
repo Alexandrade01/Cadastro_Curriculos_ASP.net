@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\alexb\\OneDrive - Fundação Salvador Arena\\5 SEMESTRE\\Linguagem de Programação I\\prova n2b1\\Cadastro_Curriculos\\Cadastro_Curriculos\\Cadastro_Curriculos.csproj": {}
+    "C:\\Users\\alexb\\Desktop\\versao minha\\Cadastro_Curriculos\\Cadastro_Curriculos\\Cadastro_Curriculos.csproj": {}
   },
   "projects": {
-    "C:\\Users\\alexb\\OneDrive - Fundação Salvador Arena\\5 SEMESTRE\\Linguagem de Programação I\\prova n2b1\\Cadastro_Curriculos\\Cadastro_Curriculos\\Cadastro_Curriculos.csproj": {
+    "C:\\Users\\alexb\\Desktop\\versao minha\\Cadastro_Curriculos\\Cadastro_Curriculos\\Cadastro_Curriculos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\alexb\\OneDrive - Fundação Salvador Arena\\5 SEMESTRE\\Linguagem de Programação I\\prova n2b1\\Cadastro_Curriculos\\Cadastro_Curriculos\\Cadastro_Curriculos.csproj",
+        "projectUniqueName": "C:\\Users\\alexb\\Desktop\\versao minha\\Cadastro_Curriculos\\Cadastro_Curriculos\\Cadastro_Curriculos.csproj",
         "projectName": "Cadastro_Curriculos",
-        "projectPath": "C:\\Users\\alexb\\OneDrive - Fundação Salvador Arena\\5 SEMESTRE\\Linguagem de Programação I\\prova n2b1\\Cadastro_Curriculos\\Cadastro_Curriculos\\Cadastro_Curriculos.csproj",
+        "projectPath": "C:\\Users\\alexb\\Desktop\\versao minha\\Cadastro_Curriculos\\Cadastro_Curriculos\\Cadastro_Curriculos.csproj",
         "packagesPath": "C:\\Users\\alexb\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\alexb\\OneDrive - Fundação Salvador Arena\\5 SEMESTRE\\Linguagem de Programação I\\prova n2b1\\Cadastro_Curriculos\\Cadastro_Curriculos\\obj\\",
+        "outputPath": "C:\\Users\\alexb\\Desktop\\versao minha\\Cadastro_Curriculos\\Cadastro_Curriculos\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

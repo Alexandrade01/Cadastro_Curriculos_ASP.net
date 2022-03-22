@@ -32,6 +32,12 @@ namespace Cadastro_Curriculos.Controllers
             return View();
         }
 
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error()
+        {
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
 
         public IActionResult Create()
         {
@@ -50,9 +56,11 @@ namespace Cadastro_Curriculos.Controllers
 
                 if (dao.Consulta(user.Id) == null) { dao.Inserir(user); }
 
-                else {
-                    
-                    dao.Alterar(user);}
+                else
+                {
+
+                    dao.Alterar(user);
+                }
 
                 return RedirectToAction("Index");
             }
@@ -67,14 +75,18 @@ namespace Cadastro_Curriculos.Controllers
         {
             try
             {
-               
+
 
                 UserDAO dao = new UserDAO();
                 UserViewModel user = dao.Consulta(Id);
                 if (user == null)
                     return RedirectToAction("Index");
                 else
+                {
                     return View("Form", user);
+                }
+
+
             }
             catch (Exception erro)
             {
@@ -104,13 +116,14 @@ namespace Cadastro_Curriculos.Controllers
                 UserDAO dao = new UserDAO();
                 UserViewModel user = dao.Exibir(id);
                 return View("FormComplete", user);
-               
+
             }
             catch (Exception erro)
             {
                 return View("Error", new ErrorViewModel(erro.ToString()));
             }
         }
+
 
     }
 }

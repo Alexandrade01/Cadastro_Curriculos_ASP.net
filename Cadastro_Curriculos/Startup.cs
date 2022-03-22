@@ -34,7 +34,7 @@ namespace Cadastro_Curriculos
             }
             else
             {
-                app.UseExceptionHandler("/Home/Error");
+                app.UseExceptionHandler("/User/Error");
             }
             app.UseStaticFiles();
 
