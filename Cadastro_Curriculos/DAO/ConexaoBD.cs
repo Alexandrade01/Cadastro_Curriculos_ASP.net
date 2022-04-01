@@ -16,7 +16,7 @@ namespace Cadastro_Curriculos.DAO
         /// <returns>Conexão aberta</returns>
         public static SqlConnection GetConexao()
         {
-            string strCon = "Data Source=DESKTOP-5K81H18\\SQLEXPRESS; Database =auladb; user id = sa; password=1234567";
+            string strCon = "Data Source=??; Database =auladb; user id = ??; password=??";
             SqlConnection conexao = new SqlConnection(strCon);
             conexao.Open();
             return conexao;
