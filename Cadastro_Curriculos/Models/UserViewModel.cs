@@ -49,5 +49,11 @@ namespace Cadastro_Curriculos.Models
             if (time == null) { return null; }
             else { return time.Value.ToShortDateString(); }
         }
+
+        public string CheckNull(DateTime? time) {
+
+            if (time == null) { return null; }
+            else { return time.GetValueOrDefault().ToString("yyyy-MM-dd"); }
+        }
     }
 }

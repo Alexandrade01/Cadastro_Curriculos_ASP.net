@@ -38,7 +38,10 @@ namespace Cadastro_Curriculos.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
-
+        /// <summary>
+        /// endpoint que ira encaminhar para view de Form onde sera feitos novos registros
+        /// </summary>
+        /// <returns>View</returns>
         public IActionResult Create()
         {
 
@@ -48,17 +51,22 @@ namespace Cadastro_Curriculos.Controllers
             return View("Form", user);
         }
 
+        /// <summary>
+        /// Endpoint que salva o registro no banco de dados
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns>View</returns>
         public IActionResult Save(UserViewModel user)
         {
             try
             {
                 UserDAO dao = new UserDAO();
-
+                // se na consulta nao constar a id requisitada ira inserir um novo registro no banco
                 if (dao.Consulta(user.Id) == null) { dao.Inserir(user); }
 
                 else
                 {
-
+                    // caso tenha ira alterar de acordo com as novas informações
                     dao.Alterar(user);
                 }
 
@@ -71,6 +79,11 @@ namespace Cadastro_Curriculos.Controllers
 
         }
 
+        /// <summary>
+        /// Endpoint que encaminha para a tela de Form onde sera editado caso exista
+        /// </summary>
+        /// <param name="Id"></param>
+        /// <returns></returns>
         public IActionResult Edit(int Id)
         {
             try
@@ -94,6 +107,11 @@ namespace Cadastro_Curriculos.Controllers
             }
         }
 
+        /// <summary>
+        /// EndPoint que deleta um
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public IActionResult Delete(int id)
         {
             try
@@ -108,7 +126,11 @@ namespace Cadastro_Curriculos.Controllers
             }
         }
 
-
+        /// <summary>
+        /// Endpoint que exibe o registro por completo na view FormComplete
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>View</returns>
         public IActionResult Exibir(int id)
         {
             try

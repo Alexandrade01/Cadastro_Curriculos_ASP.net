@@ -96,7 +96,7 @@
     <input type="text" name="formacao2"  value="@Model.Formacao2"  />
 
     <label for="conclusao2" class="form-label">Conclusão</label>
-    <input type="date" name="conclusao2"  value="@Model.Conclusao2"/>
+    <input type="date" name="conclusao2"    value="@Model.CheckNull(Model.Conclusao2)" />
     <br /><br />
 
     <label for="instituicao3" class="form-label">Instituição</label>
@@ -106,7 +106,7 @@
     <input type="text" name="formacao3"  value="@Model.Formacao3"  />
 
     <label for="conclusao3" class="form-label">Conclusão</label>
-    <input type="date" name="conclusao3"  value="@Model.Conclusao3"  />
+    <input type="date" name="conclusao3"   value="@Model.CheckNull(Model.Conclusao3)"  />
     <br /><br />
 
     <label for="instituicao4" class="form-label">Instituição</label>
@@ -116,7 +116,7 @@
     <input type="text" name="formacao4"  value="@Model.Formacao4"  />
 
     <label for="conclusao4" class="form-label">Conclusão</label>
-    <input type="date" name="conclusao4"  value="@Model.Conclusao4"  />
+    <input type="date" name="conclusao4"  value="@Model.CheckNull(Model.Conclusao4)"  />
     <br /><br />
 
     <label for="Instituicao" class="form-label">Instituição</label>
@@ -126,7 +126,7 @@
     <input type="text" name="formacao5"  value="@Model.Formacao5"  />
 
     <label for="Conclusao" class="form-label">Conclusão</label>
-    <input type="date" name="conclusao5"  value="@Model.Conclusao5"  />
+    <input type="date" name="conclusao5"   value="@Model.CheckNull(Model.Conclusao5)" />
     <br /><br />
 
     <h1> Experiências profissionais </h1>
